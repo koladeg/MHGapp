@@ -2,13 +2,16 @@ import React from 'react'
 import {Dimensions, StyleSheet, Text, TouchableOpacity, View} from 'react-native' 
 import Ionicons from '@expo/vector-icons/Ionicons';
 let width = Dimensions.get('window').width; //full width
+import { useNavigation } from '@react-navigation/native';
+
 
 export const HomeButton = props => {
+    const navigation = useNavigation();
     return (
         <View>
             <TouchableOpacity {...props}
-                            style={styles.button}
-                              onPress={props.onPress}
+                            style={[styles.button, {backgroundColor: props.color}]}
+                              onPress={() => navigation.navigate(props.screen)}
                               underlayColor={"rgba(1,1,1,0.2)"}>
                 <Ionicons name={props.icon} size={30} color="pink" />
                 <Text style={styles.text}>{props.title}</Text>
@@ -24,7 +27,6 @@ const styles = StyleSheet.create({
     // display: 'flex',
     justifyContent: 'center',
     alignItems:"center",
-    backgroundColor: 'grey',
     paddingVertical: 6,
     borderRadius: 5,
     margin:5,

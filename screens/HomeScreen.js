@@ -4,7 +4,7 @@ import { HomeButton } from '../components/HomeButton'
 
 export default function HomeScreen() {
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.container}>
     <View style={styles.screen}>
 
       <View style={styles.row}>
@@ -17,6 +17,7 @@ export default function HomeScreen() {
           title="MASTER CHART"
           icon="file-tray-full-outline"
           color="grey"
+          screen="MasterChart"
         />
       </View>
       
@@ -25,11 +26,13 @@ export default function HomeScreen() {
           title="ASSESSMENT"
           icon="git-branch" 
           color="grey"
+          screen="Disorders"
         />
         <HomeButton 
           title="MANAGEMENT"
           icon="man"
           color="grey"
+          screen="Disorders"
         />
       </View>
 
@@ -41,6 +44,9 @@ export default function HomeScreen() {
 
 
 const styles = StyleSheet.create({
+  container:{
+    flex:1,
+  },
   row:{
     flexDirection:'row',
     // alignItems:'center',
@@ -53,6 +59,8 @@ const styles = StyleSheet.create({
      color:'blue'
   },
   screen:{
-    marginHorizontal:5
+    flex:1,
+    alignItems:'center',
+    justifyContent:'center',
   }
  })
