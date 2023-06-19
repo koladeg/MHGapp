@@ -1,20 +1,25 @@
 import React from 'react'
 import {Dimensions, StyleSheet, Text, TouchableOpacity, View} from 'react-native' 
-import Ionicons from '@expo/vector-icons/Ionicons';
 let width = Dimensions.get('window').width; //full width
+let height = Dimensions.get('window').height; //full height
 import { useNavigation } from '@react-navigation/native';
+import { Icon } from '@rneui/themed';
+import { colors } from '../constants/Colors';
+
 
 
 export const HomeButton = props => {
     const navigation = useNavigation();
     return (
-        <View>
+        <View style={styles.block}>
             <TouchableOpacity {...props}
-                            style={[styles.button, {backgroundColor: props.color}]}
+                            style={[styles.button, {backgroundColor: colors.tint}]}
                               onPress={() => navigation.navigate(props.screen)}
                               underlayColor={"rgba(1,1,1,0.2)"}>
-                <Ionicons name={props.icon} size={30} color="pink" />
-                <Text style={styles.text}>{props.title}</Text>
+                    <View style={styles.innerBlock}>
+                        <Icon type={props.type} name={props.icon} size={40} color="pink" />
+                        <Text style={styles.text}>{props.title}</Text>
+                    </View>
             </TouchableOpacity>
         </View>
     )
@@ -22,16 +27,26 @@ export const HomeButton = props => {
 
 
 const styles = StyleSheet.create({
- button:{
-    // flex: 5,
-    // display: 'flex',
+ block:{
+    flex:1,
+    margin:15,
+    height: height * 0.25,
+    borderRadius: 8,
+    elevation: 4,
+    backgroundColor: 'white',
+    shadowColor: 'black',
+    shadowOpacity: 0.25,
+    shadowOffset: { width: 0, height: 2 },
+    shadowRadius: 8
+ },
+ innerBlock:{
+    flex:1,
+    padding:16,
     justifyContent: 'center',
     alignItems:"center",
-    paddingVertical: 6,
-    borderRadius: 5,
-    margin:5,
-    width: width * 0.45
-    
+ },
+ button:{
+    flex: 1,
  },
  text:{
     fontSize:17,

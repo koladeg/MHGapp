@@ -4,6 +4,7 @@ import { SelectButton } from '../components/SelectButton'
 import { ListItem } from '@rneui/themed';
 import { Icon } from '@rneui/base';
 import { DropdownButton } from '../components/DropdownButton';
+import { MainContainer } from '../components/MainContainer';
 let width = Dimensions.get('window').width;
 
 export default function MasterChartScreen() {
@@ -38,7 +39,8 @@ export default function MasterChartScreen() {
 
 const styles = StyleSheet.create({
   container:{
-    // flex:1,
+    flex:1,
+    padding:10
     // alignItems:'center',
     // justifyContent:'center',
   },

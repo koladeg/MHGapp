@@ -4,7 +4,6 @@ import { HomeButton } from '../components/HomeButton'
 
 export default function HomeScreen() {
   return (
-    <SafeAreaView style={styles.container}>
     <View style={styles.screen}>
 
       <View style={styles.row}>
@@ -12,11 +11,13 @@ export default function HomeScreen() {
           title="PATIENTS"
           icon="person"
           color="grey"
+          type="fontisto"
         />
         <HomeButton 
           title="MASTER CHART"
-          icon="file-tray-full-outline"
+          icon="clipboard-notes"
           color="grey"
+          type="foundation"
           screen="MasterChart"
         />
       </View>
@@ -24,21 +25,22 @@ export default function HomeScreen() {
       <View style={styles.row}>
         <HomeButton 
           title="ASSESSMENT"
-          icon="git-branch" 
+          icon="account-tree" 
           color="grey"
+          type="material"
           screen="Disorders"
         />
         <HomeButton 
           title="MANAGEMENT"
-          icon="man"
+          icon="stethoscope"
           color="grey"
+          type="font-awesome-5"
           screen="Disorders"
         />
       </View>
 
     </View>
   
-    </SafeAreaView>
   )
 }  
 
