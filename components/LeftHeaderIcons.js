@@ -24,10 +24,6 @@ export default function LeftHeaderIcons() {
 const styles = StyleSheet.create({
     container: {
         flexDirection:'row',
-        // alignItems: 'space-between',
-        // justifyContent: 'space-between',
-        // marginRight: 10,
-        // paddingRight: 25,
       },
       pressed: {
         opacity: 0.7
