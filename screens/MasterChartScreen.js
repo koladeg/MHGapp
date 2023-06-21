@@ -63,13 +63,19 @@ export default function MasterChartScreen() {
       <DropdownButton color={colors.sui} title={'SELF-HARM/SUICIDE'}>
         <View style={styles.details}>
           <View style={styles.detailcontain}>
-          <Text style={styles.text}>{`\u25AA Extreme hopelessness and despair\n`}</Text>
+            <Text style={styles.text}>{`\u25AA Extreme hopelessness and despair\n`}</Text>
             <Text style={styles.text}>{`\u25AA Current thoughts, plan or act of self-harm/suicide, or history thereof\n`}  </Text>
             <Text style={styles.text}>{`\u25AA  Any of the other priority conditions, chronic pain, or extreme emotional distress \n`}  </Text>
           </View>
         </View>
       </DropdownButton>
       <DropdownButton color={colors.other} title={'OTHER SIGNIFICANT MENTAL HEALTH COMPLAINTS'}>
+        <View style={styles.details}>
+          <View style={styles.detailcontain}>
+            <Text style={styles.text}>{`\u25AA Feeling extremely tired, depressed, irritated, anxious or stressed\n`}</Text>
+            <Text style={styles.text}>{`\u25AA Medically unexplained somatic complaints (i.e do not have a known physical cause to fully explain the symptom).\n`}  </Text>
+          </View>
+        </View>
       </DropdownButton>
       <LinearGradient
         // Button Linear Gradient

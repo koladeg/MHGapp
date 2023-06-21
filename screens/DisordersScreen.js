@@ -1,31 +1,39 @@
 import { View, Text, StyleSheet, Dimensions } from 'react-native'
 import React from 'react'
 import { SelectButton } from '../components/SelectButton'
+import { colors } from '../constants/Colors';
+import { MODULE } from '../constants/Enums';
 let width = Dimensions.get('window').width;
 
-export default function DisordersScreen() {
+export default function DisordersScreen(props) {
+  const category = props.route.params.category
+
+  function pressHandler(module){
+    props.navigation.navigate(category, { module: module})
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.bottomButton}>
-          <SelectButton style={styles.button}  title="DEPRESSION" />
+          <SelectButton style={[styles.button, {backgroundColor: colors.dep}]} onPress={() => pressHandler(MODULE.DEP)}  title={MODULE.DEP.name} />
       </View>
       <View style={styles.bottomButton}>
-          <SelectButton style={styles.button} title="PSYCHOSES" />
+          <SelectButton style={[styles.button, {backgroundColor: colors.psy}]} onPress={() => pressHandler(MODULE.PSY)} title={MODULE.PSY.name} />
+      </View>
+      {/* <View style={styles.bottomButton}>
+          <SelectButton style={[styles.button, {backgroundColor: colors.dep}]} onPress={() => pressHandler()} title={MODULE.DEP.name}"CHILD & ADOLESCENT MENTAL & BEHAVIOURAL DISORDERS" />
+      </View> */}
+      <View style={styles.bottomButton}>
+          <SelectButton style={[styles.button, {backgroundColor: colors.epi}]} onPress={() => pressHandler(MODULE.EPI)} title={MODULE.EPI.name} />
       </View>
       <View style={styles.bottomButton}>
-          <SelectButton style={styles.button} title="CHILD & ADOLESCENT MENTAL & BEHAVIOURAL DISORDERS" />
+          <SelectButton style={[styles.button, {backgroundColor: colors.sub}]} onPress={() => pressHandler(MODULE.SUB)} title={MODULE.SUB.name} />
       </View>
       <View style={styles.bottomButton}>
-          <SelectButton style={styles.button} title="DEMENTIA" />
+          <SelectButton style={[styles.button, {backgroundColor: colors.sui}]} onPress={() => pressHandler(MODULE.SUI)} title={MODULE.SUI.name} />
       </View>
       <View style={styles.bottomButton}>
-          <SelectButton style={styles.button} title="DISORDERS DUE TO SUBSTANCE USE" />
-      </View>
-      <View style={styles.bottomButton}>
-          <SelectButton style={styles.button} title="SELF-HARM/SUICIDE" />
-      </View>
-      <View style={styles.bottomButton}>
-          <SelectButton style={styles.button} title="OTHER SIGNIFICANT MENTAL HEALTH COMPLAINTS" />
+          <SelectButton style={[styles.button, {backgroundColor: colors.other}]} onPress={() => pressHandler(MODULE.OTHER)} title={MODULE.OTHER.name} />
       </View>
     </View>
   )
@@ -38,7 +46,7 @@ const styles = StyleSheet.create({
     justifyContent:'center',
   },
   button:{
-    backgroundColor:'#2c2766',
+    // backgroundColor:'#2c2766',
     padding:20,
     alignItems:"center",
     width:width - 40,

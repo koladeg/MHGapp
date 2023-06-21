@@ -3,9 +3,9 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from '../screens/HomeScreen';
 import MasterChartScreen from '../screens/MasterChartScreen';
 import DisordersScreen from '../screens/DisordersScreen';
-import Header from '../components/Header';
 import LeftHeaderIcons from '../components/LeftHeaderIcons';
 import RightHeaderIcons from '../components/RightHeaderIcons';
+import AssessmentScreen from '../screens/AssessmentScreen';
 
 const MainStack = createNativeStackNavigator();
 
@@ -39,6 +39,8 @@ export default function AppNavigator() {
         name="MasterChart" component={MasterChartScreen} />
         < MainStack.Screen 
         name="Disorders" component={DisordersScreen} />
+        < MainStack.Screen 
+        name="ASSESSMENT" component={AssessmentScreen} />
     </ MainStack.Navigator>
   )
 }

@@ -14,7 +14,7 @@ export const HomeButton = props => {
         <View style={styles.block}>
             <TouchableOpacity {...props}
                             style={[styles.button, {backgroundColor: colors.tint}]}
-                              onPress={() => navigation.navigate(props.screen)}
+                              onPress={() => navigation.navigate(props.screen, { category: props.title })}
                               underlayColor={"rgba(1,1,1,0.2)"}>
                     <View style={styles.innerBlock}>
                         <Icon type={props.type} name={props.icon} size={40} color="pink" />
