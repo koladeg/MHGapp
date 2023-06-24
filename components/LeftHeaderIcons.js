@@ -12,7 +12,7 @@ export default function LeftHeaderIcons() {
       >
         <Icon name="menu" type="ionicon" color={colors.secondary} />
       </Pressable>
-      <Pressable style={[({pressed}) => pressed && styles.pressed, {marginLeft: 15}]}
+      <Pressable style={[({pressed}) => pressed && styles.pressed, {marginLeft: 10}]}
         onPress={() => navigation.navigate('Home')}
       >
         <Icon name="home-outline" type="ionicon" color={colors.primary} />

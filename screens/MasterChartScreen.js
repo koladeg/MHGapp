@@ -46,6 +46,15 @@ export default function MasterChartScreen() {
           </View>
         </View>
       </DropdownButton>
+      <DropdownButton color={colors.dem} title={'DEMENTIA'}>
+        <View style={styles.details}>
+          <View style={styles.detailcontain}>
+            <Text style={styles.text}>
+            {`\u25AA Decline or problems with memory (severe forgetfulness) and orientation (awareness of time, place and person \n \u25AA  Mood or behavioural problems such as apathy (appearing uninterested) or irritability \n \u25AA Loss of emotional control (easily upset, irritable or tearful) \n \u25AA Difficulties in carrying out usual work, domestic or social activities`}
+            </Text>
+          </View>
+        </View>
+      </DropdownButton>
       <DropdownButton color={colors.sub} title={'DISORDERS DUE TO SUBSTANCE USE'}>
         <View style={styles.details}>
         <Text style={styles.text}>{`All persons presenting to health care facilities should be asked about their tobacco and alcohol use.\n`}</Text>

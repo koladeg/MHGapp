@@ -6,6 +6,7 @@ import DisordersScreen from '../screens/DisordersScreen';
 import LeftHeaderIcons from '../components/LeftHeaderIcons';
 import RightHeaderIcons from '../components/RightHeaderIcons';
 import AssessmentScreen from '../screens/AssessmentScreen';
+import FollowUpScreen from '../screens/FollowUpScreen';
 
 const MainStack = createNativeStackNavigator();
 
@@ -19,7 +20,7 @@ export default function AppNavigator() {
               height: 0,
           }
       },
-      // headerTitleAlign: 'center',
+      headerTitleAlign: 'center',
       headerTitle: props => <Text>mhGap</Text>,
       headerLeft: () => {
         return <LeftHeaderIcons />
@@ -41,6 +42,8 @@ export default function AppNavigator() {
         name="Disorders" component={DisordersScreen} />
         < MainStack.Screen 
         name="ASSESSMENT" component={AssessmentScreen} />
+        < MainStack.Screen 
+        name="followUp" component={FollowUpScreen} />
     </ MainStack.Navigator>
   )
 }

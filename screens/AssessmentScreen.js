@@ -8,17 +8,17 @@ let width = Dimensions.get('window').width;
 export default function AssessmentScreen(props) {
   const module = props.route.params.module
 
-  function pressHandler(name){
-    navigation.navigate(category, { name: name})
+  function pressHandler(assess){
+    props.navigation.navigate(assess, { module: module})
   }
 
   return (
     <View style={styles.container}>
       <View style={styles.bottomButton}>
-          <SelectIconButton style={[styles.button, {backgroundColor: colors.tint}]} type={'font-awesome-5'} icon={'notes-medical'}  title="ASSESSMENT" />
+          <SelectIconButton style={[styles.button, {backgroundColor: colors.tint}]} type={'font-awesome-5'} iconColor={module.color} icon={'notes-medical'}  title="ASSESSMENT" />
       </View>
       <View style={styles.bottomButton}>
-          <SelectIconButton style={[styles.button, {backgroundColor: colors.tint}]} type={'ionicon'} icon={'arrow-redo-circle'} title="FOLLOW-UP" />
+          <SelectIconButton style={[styles.button, {backgroundColor: colors.tint}]} type={'ionicon'} iconColor={module.color} onPress={() => pressHandler('followUp')} icon={'arrow-redo-circle'} title="FOLLOW-UP" />
       </View>
     </View>
   )
