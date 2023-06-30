@@ -20,11 +20,11 @@ export default function DisordersScreen(props) {
       <View style={styles.bottomButton}>
           <SelectButton style={[styles.button, {backgroundColor: colors.psy}]} onPress={() => pressHandler(MODULE.PSY)} title={MODULE.PSY.name} />
       </View>
-      {/* <View style={styles.bottomButton}>
-          <SelectButton style={[styles.button, {backgroundColor: colors.dep}]} onPress={() => pressHandler()} title={MODULE.DEP.name}"CHILD & ADOLESCENT MENTAL & BEHAVIOURAL DISORDERS" />
-      </View> */}
       <View style={styles.bottomButton}>
           <SelectButton style={[styles.button, {backgroundColor: colors.epi}]} onPress={() => pressHandler(MODULE.EPI)} title={MODULE.EPI.name} />
+      </View>
+      <View style={styles.bottomButton}>
+          <SelectButton style={[styles.button, {backgroundColor: colors.dem}]} onPress={() => pressHandler()} title={MODULE.DEM.name} />
       </View>
       <View style={styles.bottomButton}>
           <SelectButton style={[styles.button, {backgroundColor: colors.sub}]} onPress={() => pressHandler(MODULE.SUB)} title={MODULE.SUB.name} />
