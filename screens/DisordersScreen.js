@@ -24,7 +24,7 @@ export default function DisordersScreen(props) {
           <SelectButton style={[styles.button, {backgroundColor: colors.epi}]} onPress={() => pressHandler(MODULE.EPI)} title={MODULE.EPI.name} />
       </View>
       <View style={styles.bottomButton}>
-          <SelectButton style={[styles.button, {backgroundColor: colors.dem}]} onPress={() => pressHandler()} title={MODULE.DEM.name} />
+          <SelectButton style={[styles.button, {backgroundColor: colors.dem}]} onPress={() => pressHandler(MODULE.DEM)} title={MODULE.DEM.name} />
       </View>
       <View style={styles.bottomButton}>
           <SelectButton style={[styles.button, {backgroundColor: colors.sub}]} onPress={() => pressHandler(MODULE.SUB)} title={MODULE.SUB.name} />
