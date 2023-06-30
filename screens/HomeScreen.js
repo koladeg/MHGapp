@@ -1,10 +1,13 @@
 import { View, Text, StyleSheet } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { HomeButton } from '../components/HomeButton'
+import { colors } from '../constants/Colors'
+import ModeIdentifier from '../components/ModeIdentifier'
 
 export default function HomeScreen() {
   return (
     <View style={styles.screen}>
+      <ModeIdentifier />
 
       <View style={styles.row}>
         <HomeButton 
