@@ -10,7 +10,9 @@ export default function LeftHeaderIcons() {
     <View style={styles.container}>
       <Pressable style={({pressed}) => pressed && styles.pressed}
       >
-        <Icon name="menu" type="ionicon" color={colors.secondary} />
+        <Icon name="menu" type="ionicon" color={colors.secondary}
+          onPress={() => navigation.navigate('Login')}
+         />
       </Pressable>
       <Pressable style={[({pressed}) => pressed && styles.pressed, {marginLeft: 10}]}
         onPress={() => navigation.navigate('Home')}

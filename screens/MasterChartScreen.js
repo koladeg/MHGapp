@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { DropdownButton } from '../components/DropdownButton';
 import { LinearGradient } from 'expo-linear-gradient';
 import { colors } from '../constants/Colors';
+import GradientButton from '../components/GradientButton';
 let width = Dimensions.get('window').width;
 
 export default function MasterChartScreen() {
@@ -86,13 +87,10 @@ export default function MasterChartScreen() {
           </View>
         </View>
       </DropdownButton>
-      <LinearGradient
-        // Button Linear Gradient
-        start={{ y: 0.0, x: 0.0 }} end={{ y: 0.0, x: 1.0 }}
-        colors={[colors.secondary, colors.primary]}
-        style={[styles.button, {marginTop: 50}]}>
-        <Text style={styles.buttonText}>Proceed</Text>
-      </LinearGradient>
+      <GradientButton 
+        text={'Proceed'}
+        style={[styles.button, {marginVertical: 50}]}
+      />
     </ScrollView>
   )
 }
@@ -101,7 +99,8 @@ const styles = StyleSheet.create({
   container:{
     flex:1,
     padding:10,
-    marginBottom: 32,
+    // marginBottom: 30,
+    // paddingBottom: 20
   },
   details:{
     alignItems:'center',

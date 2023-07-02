@@ -7,10 +7,11 @@ import LeftHeaderIcons from '../components/LeftHeaderIcons';
 import RightHeaderIcons from '../components/RightHeaderIcons';
 import AssessmentScreen from '../screens/AssessmentScreen';
 import FollowUpScreen from '../screens/FollowUpScreen';
+import LoginScreen from '../screens/LoginScreen';
 
 const MainStack = createNativeStackNavigator();
 
-export default function AppNavigator() {
+export function AppNavigator() {
   return (
     < MainStack.Navigator 
     screenOptions={{
@@ -44,6 +45,39 @@ export default function AppNavigator() {
         name="ASSESSMENT" component={AssessmentScreen} />
         < MainStack.Screen 
         name="followUp" component={FollowUpScreen} />
+        < MainStack.Screen 
+        name="Login" component={LoginScreen} />
     </ MainStack.Navigator>
   )
 }
+
+// const AuthStack = createStackNavigator();
+
+// const AuthStackScreen = () => ( 
+//   <AuthStack.Navigator
+//         headerMode="none"
+//   >
+//     <AuthStack.Screen
+//       name="Login"
+//       component={LoginScreen}
+//     />
+//   </AuthStack.Navigator>
+
+// );
+
+// const RootStack = createStackNavigator();
+
+// export const RootStackScreen = () => ( 
+//   <RootStack.Navigator
+//         headerMode="none"
+//   >
+//     <RootStack.Screen
+//       name="Auth"
+//       component={AuthStackScreen}
+//     />
+//     <RootStack.Screen
+//       name="Main"
+//       component={AppNavigator}
+//     />
+//   </RootStack.Navigator>
+// );
