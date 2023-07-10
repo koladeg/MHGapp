@@ -1,12 +1,13 @@
 import { DrawerActions, useNavigation } from '@react-navigation/native';
+import * as React from 'react';
 
 
-export const navigationRef = useNavigation();
+export const navigationRef = React.createRef();
 
 
-// function setTopLevelNavigator(navigatorRef) {
-//     console.log('toplevelset');
-// }
+function setTopLevelNavigator(navigatorRef) {
+    console.log('toplevelset');
+}
 
 function navigate(routeName, params) {
     console.log('navigating...');

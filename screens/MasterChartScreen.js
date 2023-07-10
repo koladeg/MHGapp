@@ -4,12 +4,15 @@ import { DropdownButton } from '../components/DropdownButton';
 import { LinearGradient } from 'expo-linear-gradient';
 import { colors } from '../constants/Colors';
 import GradientButton from '../components/GradientButton';
+import ScreenIdentifier from '../components/ScreenIdentifier';
 let width = Dimensions.get('window').width;
 
 export default function MasterChartScreen() {
 
   return (
     <ScrollView style={styles.container}>
+    <ScreenIdentifier text={"Master Chart"} color={colors.tertiary}/>
+    <View style={{padding: 10}}>
     <View style={styles.button1View}>
       <LinearGradient
           // Button Linear Gradient
@@ -93,6 +96,8 @@ export default function MasterChartScreen() {
           style={[styles.button]}
         />
       </View>
+
+    </View>
     </ScrollView>
   )
 }
@@ -100,7 +105,7 @@ export default function MasterChartScreen() {
 const styles = StyleSheet.create({
   container:{
     flex:1,
-    padding:10,
+    // padding:10,
     // marginBottom: 30,
     // paddingBottom: 20
   },
@@ -124,7 +129,8 @@ const styles = StyleSheet.create({
   },
   button1View:{
     alignItems:'flex-end',
-    marginVertical: 22,
+    marginTop: 82,
+    marginBottom: 10
   },
   button1:{
     width:width/2.4,

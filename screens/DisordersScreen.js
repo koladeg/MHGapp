@@ -3,10 +3,12 @@ import React from 'react'
 import { SelectButton } from '../components/SelectButton'
 import { colors } from '../constants/Colors';
 import { MODULE } from '../constants/Enums';
+import ScreenIdentifier from '../components/ScreenIdentifier';
 let width = Dimensions.get('window').width;
 
 export default function DisordersScreen(props) {
   const category = props.route.params.category
+  const color = props.route.params.color
 
   function pressHandler(module){
     props.navigation.navigate(category, { module: module})
@@ -14,6 +16,7 @@ export default function DisordersScreen(props) {
 
   return (
     <View style={styles.container}>
+      <ScreenIdentifier text={category} color={colors.tertiary}/>
       <View style={styles.bottomButton}>
           <SelectButton style={[styles.button, {backgroundColor: colors.dep}]} onPress={() => pressHandler(MODULE.DEP)}  title={MODULE.DEP.name} />
       </View>
