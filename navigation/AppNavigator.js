@@ -8,6 +8,7 @@ import RightHeaderIcons from '../components/RightHeaderIcons';
 import AssessmentScreen from '../screens/AssessmentScreen';
 import FollowUpScreen from '../screens/FollowUpScreen';
 import LoginScreen from '../screens/LoginScreen';
+import RegisterScreen from '../screens/RegisterScreen';
 
 const MainStack = createNativeStackNavigator();
 
@@ -47,6 +48,8 @@ export function AppNavigator() {
         name="followUp" component={FollowUpScreen} />
         < MainStack.Screen 
         name="Login" component={LoginScreen} />
+        < MainStack.Screen 
+        name="register" component={RegisterScreen} />
     </ MainStack.Navigator>
   )
 }

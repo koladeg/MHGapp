@@ -1,18 +1,25 @@
-import { View, Text, StyleSheet, Image, Dimensions, Pressable } from 'react-native'
+import { View, Text, StyleSheet,Dimensions } from 'react-native'
 import React from 'react'
 import InputField from '../components/InputField'
-import GradientButton from '../components/GradientButton'
 import { SelectButton } from '../components/SelectButton';
+import GradientButton from '../components/GradientButton'
 import { colors } from '../constants/Colors';
 let width = Dimensions.get('window').width;
 
-const LoginScreen = (props) => {
+export default function RegisterScreen({props}) {
   return (
     <View style={styles.container}>
         <View style={styles.innerContainer}>
-            <Image resizeMode={'cover'} source={require('../assets/images/mhgapLogo.png')} />
-
           <View style={styles.form}>
+            <InputField
+              label="User name"
+              icon="person"
+              iconType="ionicon"
+              placeholder="Adeola"
+              // onChangeText={handleChange('email')}
+              // value={value.email}
+            />
+
             <InputField
               label="User email"
               icon="mail"
@@ -24,7 +31,28 @@ const LoginScreen = (props) => {
             />
 
             <InputField
+              label="Phone number"
+              icon="call"
+              iconType="ionicon"
+              placeholder="0123212"
+              // onChangeText={handleChange('password')}
+              // value={value.password}
+              keyboardType="numeric"
+              // isPassword=true
+            />
+            <InputField
               label="Password"
+              icon="lock-closed"
+              iconType="ionicon"
+              placeholder="* * * * * *"
+              // onChangeText={handleChange('password')}
+              // value={value.password}
+              keyboardType="email-address"
+              secure={true}
+              // isPassword=true
+            />
+            <InputField
+              label="Repeat Password"
               icon="lock-closed"
               iconType="ionicon"
               placeholder="* * * * * *"
@@ -37,17 +65,12 @@ const LoginScreen = (props) => {
           </View>
           
 
-          <GradientButton 
-            text={'Login'}
-            style={styles.button}
-          />
-          <Pressable style={{alignSelf: 'flex-end'}}>
-            <Text style={styles.text} >Forgot my password</Text>
-          </Pressable>
-
-          <Text style={{ paddingTop: 20}} >Not Registered?</Text>
-          <View style={{marginTop: 10}}>
-              <SelectButton style={[styles.button2, {backgroundColor: colors.secondary}]} title={"Register"} onPress={() => props.navigation.navigate('register')} />
+          <View style={ [styles.buttons, {marginTop: 10}]}>
+            <SelectButton style={[styles.button, {backgroundColor: colors.sui}]} title={"Cancel"} />
+            <GradientButton 
+              text={'Create User'}
+              style={styles.button}
+            />
           </View>
         </View>
       {/* <Text>LoginScreen</Text> */}
@@ -55,12 +78,10 @@ const LoginScreen = (props) => {
   )
 }
 
-export default LoginScreen
-
 const styles = StyleSheet.create({
     container:{
       flex:1,
-      padding: 25,
+      padding: 20,
       // paddingTop: 10
     },
     innerContainer:{
@@ -85,19 +106,17 @@ const styles = StyleSheet.create({
       width:'90%',
     },
     button:{
-      // flex:2,
-      padding:15,
-      alignItems:"center",
-      width:width - 40,
+      width:width/2.5,
       borderRadius:5,
-      marginVertical: 20
-    },
-    button2:{
-      // backgroundColor:'#2c2766',
       padding:20,
-      alignItems:"center",
-      width:width - 40,
-      borderRadius:5,
+      marginHorizontal: 20,
+      alignItems: 'center'
     },
+    buttons:{
+      flexDirection: 'row',
+      // alignItems: 'center',
+      justifyContent: 'space-between'
+    },
+  
 
    })

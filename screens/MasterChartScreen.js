@@ -87,10 +87,12 @@ export default function MasterChartScreen() {
           </View>
         </View>
       </DropdownButton>
-      <GradientButton 
-        text={'Proceed'}
-        style={[styles.button, {marginVertical: 50}]}
-      />
+      <View style={{alignItems: 'center', justifyContent:'center'}}>
+        <GradientButton 
+          text={'Proceed'}
+          style={[styles.button]}
+        />
+      </View>
     </ScrollView>
   )
 }
@@ -112,10 +114,12 @@ const styles = StyleSheet.create({
     width: '90%'
   },
   button:{
-    flex:2,
-    paddingHorizontal:15,
+    // flex:2,
+    // paddingHorizontal:15,
     alignItems:"center",
-    // width:width - 40,
+    padding: 20,
+    marginVertical:20,
+    width:width - 40,
     borderRadius:5,
   },
   button1View:{
