@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
     top: 0,
     height: 70,
     alignItems:'center',
+    zIndex: 10
     // justifyContent:'center',
   },
   identifierText:{

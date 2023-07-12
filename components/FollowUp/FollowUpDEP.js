@@ -2,7 +2,7 @@ import React from 'react'
 import {StyleSheet, Text, TouchableOpacity, View, Dimensions, ScrollView} from 'react-native'
 let height = Dimensions.get('window').height; //full height
 
-export default function FollowUpDEP() {
+export function FollowUpDEP() {
   return (
     <ScrollView style={styles.container}>
         <View style={styles.titleUnderscore}>
@@ -114,6 +114,7 @@ const styles = StyleSheet.create({
     container:{
         marginHorizontal:5,
         marginBottom: 20,
+        paddingTop: 70,
     },
     detail:{
         marginVertical: 6,

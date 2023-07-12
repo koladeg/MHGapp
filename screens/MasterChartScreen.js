@@ -10,95 +10,98 @@ let width = Dimensions.get('window').width;
 export default function MasterChartScreen() {
 
   return (
-    <ScrollView style={styles.container}>
-    <ScreenIdentifier text={"Master Chart"} color={colors.tertiary}/>
-    <View style={{padding: 10}}>
-    <View style={styles.button1View}>
-      <LinearGradient
-          // Button Linear Gradient
-          start={{ y: 0.0, x: 0.0 }} end={{ y: 0.0, x: 1.0 }}
-          colors={[colors.secondary, colors.primary]}
-          style={styles.button1}>
-          <Text style={styles.buttonText}>Show all</Text>
-      </LinearGradient>
-    </View>
-      <DropdownButton color={colors.dep} title={'DEPRESSION'}>
-        <View style={styles.details}>
-          <View style={styles.detailcontain}>
-            <Text style={styles.text}>
-            {`\u25AA Multiple persistent physical symptoms with no clear cause. \n \u25AA Low energy, fatigue, sleep problems. \n \u25AA Persistent sadness or depressed mood, anxiety`}
-            </Text>
+    <View style={{flex: 1}}>
+      <ScreenIdentifier text={"Master Chart"} color={colors.tertiary}/>
+      <ScrollView style={styles.container}>
+          <View style={{padding: 10}}>
+          <View style={styles.button1View}>
+            <LinearGradient
+                // Button Linear Gradient
+                start={{ y: 0.0, x: 0.0 }} end={{ y: 0.0, x: 1.0 }}
+                colors={[colors.secondary, colors.primary]}
+                style={styles.button1}>
+                <Text style={styles.buttonText}>Show all</Text>
+            </LinearGradient>
           </View>
-        </View>
-      </DropdownButton>
-      <DropdownButton color={colors.psy} title={'PSYCHOSES'}>
-        <View style={styles.details}>
-          <View style={styles.detailcontain}>
-            <Text style={styles.text}>{`\u25AA Marked behavioural changes; neglecting usual responsibilities related to work, school, domestic or social activities`}
-            </Text>
-            <Text style={styles.text}>{`\u25AA Agitated, aggressive behavior, decreased or increased activity \n`}  </Text>
-            <Text style={styles.text}>{`\u25AA Fixed false beliefs not shared by others in the person’s culture \n`}  </Text>
-            <Text style={styles.text}>{`\u25AA Hearing voices or seeing things that are not there \n`}  </Text>
-            <Text style={styles.text}>{`\u25AA Lack of realization that one is having mental health problem \n`}  </Text>
-          </View>
-        </View>    
-      </DropdownButton>
-      <DropdownButton color={colors.epi} title={'EPILEPSY'}>
-        <View style={styles.details}>
-          <View style={styles.detailcontain}>
-            <Text style={styles.text}>{`\u25AA Convulsive movement or fits/seizure. \n \u25AA During the convulsion: loss of consciousness or impaired consciousness, stiffness, rigidity, tongue bite, injury, incontinence of urine or faeces  \n \u25AA After the convulsion: fatigue, drowsiness, sleepiness, confusion, abnormal behaviour, headache, muscle aches, or weakness on one side of the body \n`}  </Text>
-          </View>
-        </View>
-      </DropdownButton>
-      <DropdownButton color={colors.dem} title={'DEMENTIA'}>
-        <View style={styles.details}>
-          <View style={styles.detailcontain}>
-            <Text style={styles.text}>
-            {`\u25AA Decline or problems with memory (severe forgetfulness) and orientation (awareness of time, place and person \n \u25AA  Mood or behavioural problems such as apathy (appearing uninterested) or irritability \n \u25AA Loss of emotional control (easily upset, irritable or tearful) \n \u25AA Difficulties in carrying out usual work, domestic or social activities`}
-            </Text>
-          </View>
-        </View>
-      </DropdownButton>
-      <DropdownButton color={colors.sub} title={'DISORDERS DUE TO SUBSTANCE USE'}>
-        <View style={styles.details}>
-        <Text style={styles.text}>{`All persons presenting to health care facilities should be asked about their tobacco and alcohol use.\n`}</Text>
-          <View style={styles.detailcontain}>
-            <Text style={styles.text}>{`\u25AA Appearing affected by alcohol or other substance (e.g. smell of alcohol, slurred speech, sedated, erratic behaviour) \n`}</Text>
-            <Text style={styles.text}>{`\u25AA Signs and symptoms of acute behavioural effects, withdrawal features or effects of prolonged use  \n`}  </Text>
-            <Text style={styles.text}>{`\u25AA Deterioration of social functioning (i.e. difficulties at work or home, unkempt appearance) \n`}  </Text>
-            <Text style={styles.text}>{`\u25AA Signs of chronic liver disease (abnormal liver enzymes), jaundiced (yellow) skin and eyes, palpable and tender liver edge (in early liver disease), ascites (distended abdomen is filled with fluid), spider naevi (spider-like blood vessels visible on the surface of the skin), and altered mental status (hepatic encephalopathy) \n`}  </Text>
-            <Text style={styles.text}>{`\u25AA Problems with balance, walking, coordinated  movements, and nystagmus \n`}  </Text>
-            <Text style={styles.text}>{`\u25AA Incidental findings: macrocytic anaemia, low platelet count, elevated mean corpuscular volume (MCV \n`}  </Text>
-            <Text style={styles.text}>{`\u25AA Emergency presentation due to substance withdrawal, overdose, or intoxication. Person may appear sedated, overstimulated, agitated, anxious or confused \n \u2043 Recurrent requests for psychoactive medications including analgesics \n \u2043 Injuries \n \u2043 Infections associated with intravenous drug use (HIV/AIDS, Hepatitis C)`}  </Text>
-          </View>
-        </View>
-      </DropdownButton>
-      <DropdownButton color={colors.sui} title={'SELF-HARM/SUICIDE'}>
-        <View style={styles.details}>
-          <View style={styles.detailcontain}>
-            <Text style={styles.text}>{`\u25AA Extreme hopelessness and despair\n`}</Text>
-            <Text style={styles.text}>{`\u25AA Current thoughts, plan or act of self-harm/suicide, or history thereof\n`}  </Text>
-            <Text style={styles.text}>{`\u25AA  Any of the other priority conditions, chronic pain, or extreme emotional distress \n`}  </Text>
-          </View>
-        </View>
-      </DropdownButton>
-      <DropdownButton color={colors.other} title={'OTHER SIGNIFICANT MENTAL HEALTH COMPLAINTS'}>
-        <View style={styles.details}>
-          <View style={styles.detailcontain}>
-            <Text style={styles.text}>{`\u25AA Feeling extremely tired, depressed, irritated, anxious or stressed\n`}</Text>
-            <Text style={styles.text}>{`\u25AA Medically unexplained somatic complaints (i.e do not have a known physical cause to fully explain the symptom).\n`}  </Text>
-          </View>
-        </View>
-      </DropdownButton>
-      <View style={{alignItems: 'center', justifyContent:'center'}}>
-        <GradientButton 
-          text={'Proceed'}
-          style={[styles.button]}
-        />
-      </View>
+            <DropdownButton color={colors.dep} title={'DEPRESSION'}>
+              <View style={styles.details}>
+                <View style={styles.detailcontain}>
+                  <Text style={styles.text}>
+                  {`\u25AA Multiple persistent physical symptoms with no clear cause. \n \u25AA Low energy, fatigue, sleep problems. \n \u25AA Persistent sadness or depressed mood, anxiety`}
+                  </Text>
+                </View>
+              </View>
+            </DropdownButton>
+            <DropdownButton color={colors.psy} title={'PSYCHOSES'}>
+              <View style={styles.details}>
+                <View style={styles.detailcontain}>
+                  <Text style={styles.text}>{`\u25AA Marked behavioural changes; neglecting usual responsibilities related to work, school, domestic or social activities`}
+                  </Text>
+                  <Text style={styles.text}>{`\u25AA Agitated, aggressive behavior, decreased or increased activity \n`}  </Text>
+                  <Text style={styles.text}>{`\u25AA Fixed false beliefs not shared by others in the person’s culture \n`}  </Text>
+                  <Text style={styles.text}>{`\u25AA Hearing voices or seeing things that are not there \n`}  </Text>
+                  <Text style={styles.text}>{`\u25AA Lack of realization that one is having mental health problem \n`}  </Text>
+                </View>
+              </View>    
+            </DropdownButton>
+            <DropdownButton color={colors.epi} title={'EPILEPSY'}>
+              <View style={styles.details}>
+                <View style={styles.detailcontain}>
+                  <Text style={styles.text}>{`\u25AA Convulsive movement or fits/seizure. \n \u25AA During the convulsion: loss of consciousness or impaired consciousness, stiffness, rigidity, tongue bite, injury, incontinence of urine or faeces  \n \u25AA After the convulsion: fatigue, drowsiness, sleepiness, confusion, abnormal behaviour, headache, muscle aches, or weakness on one side of the body \n`}  </Text>
+                </View>
+              </View>
+            </DropdownButton>
+            <DropdownButton color={colors.dem} title={'DEMENTIA'}>
+              <View style={styles.details}>
+                <View style={styles.detailcontain}>
+                  <Text style={styles.text}>
+                  {`\u25AA Decline or problems with memory (severe forgetfulness) and orientation (awareness of time, place and person \n \u25AA  Mood or behavioural problems such as apathy (appearing uninterested) or irritability \n \u25AA Loss of emotional control (easily upset, irritable or tearful) \n \u25AA Difficulties in carrying out usual work, domestic or social activities`}
+                  </Text>
+                </View>
+              </View>
+            </DropdownButton>
+            <DropdownButton color={colors.sub} title={'DISORDERS DUE TO SUBSTANCE USE'}>
+              <View style={styles.details}>
+              <Text style={styles.text}>{`All persons presenting to health care facilities should be asked about their tobacco and alcohol use.\n`}</Text>
+                <View style={styles.detailcontain}>
+                  <Text style={styles.text}>{`\u25AA Appearing affected by alcohol or other substance (e.g. smell of alcohol, slurred speech, sedated, erratic behaviour) \n`}</Text>
+                  <Text style={styles.text}>{`\u25AA Signs and symptoms of acute behavioural effects, withdrawal features or effects of prolonged use  \n`}  </Text>
+                  <Text style={styles.text}>{`\u25AA Deterioration of social functioning (i.e. difficulties at work or home, unkempt appearance) \n`}  </Text>
+                  <Text style={styles.text}>{`\u25AA Signs of chronic liver disease (abnormal liver enzymes), jaundiced (yellow) skin and eyes, palpable and tender liver edge (in early liver disease), ascites (distended abdomen is filled with fluid), spider naevi (spider-like blood vessels visible on the surface of the skin), and altered mental status (hepatic encephalopathy) \n`}  </Text>
+                  <Text style={styles.text}>{`\u25AA Problems with balance, walking, coordinated  movements, and nystagmus \n`}  </Text>
+                  <Text style={styles.text}>{`\u25AA Incidental findings: macrocytic anaemia, low platelet count, elevated mean corpuscular volume (MCV \n`}  </Text>
+                  <Text style={styles.text}>{`\u25AA Emergency presentation due to substance withdrawal, overdose, or intoxication. Person may appear sedated, overstimulated, agitated, anxious or confused \n \u2043 Recurrent requests for psychoactive medications including analgesics \n \u2043 Injuries \n \u2043 Infections associated with intravenous drug use (HIV/AIDS, Hepatitis C)`}  </Text>
+                </View>
+              </View>
+            </DropdownButton>
+            <DropdownButton color={colors.sui} title={'SELF-HARM/SUICIDE'}>
+              <View style={styles.details}>
+                <View style={styles.detailcontain}>
+                  <Text style={styles.text}>{`\u25AA Extreme hopelessness and despair\n`}</Text>
+                  <Text style={styles.text}>{`\u25AA Current thoughts, plan or act of self-harm/suicide, or history thereof\n`}  </Text>
+                  <Text style={styles.text}>{`\u25AA  Any of the other priority conditions, chronic pain, or extreme emotional distress \n`}  </Text>
+                </View>
+              </View>
+            </DropdownButton>
+            <DropdownButton color={colors.other} title={'OTHER SIGNIFICANT MENTAL HEALTH COMPLAINTS'}>
+              <View style={styles.details}>
+                <View style={styles.detailcontain}>
+                  <Text style={styles.text}>{`\u25AA Feeling extremely tired, depressed, irritated, anxious or stressed\n`}</Text>
+                  <Text style={styles.text}>{`\u25AA Medically unexplained somatic complaints (i.e do not have a known physical cause to fully explain the symptom).\n`}  </Text>
+                </View>
+              </View>
+            </DropdownButton>
+            <View style={{alignItems: 'center', justifyContent:'center'}}>
+              <GradientButton 
+                text={'Proceed'}
+                style={[styles.button]}
+              />
+            </View>
 
+          </View>
+          </ScrollView>
     </View>
-    </ScrollView>
+    
   )
 }
 

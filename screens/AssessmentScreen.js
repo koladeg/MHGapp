@@ -3,6 +3,7 @@ import React from 'react'
 import { SelectButton } from '../components/SelectButton'
 import { colors } from '../constants/Colors';
 import { SelectIconButton } from '../components/SelectIconButton';
+import ScreenIdentifier from '../components/ScreenIdentifier';
 let width = Dimensions.get('window').width;
 
 export default function AssessmentScreen(props) {
@@ -14,6 +15,7 @@ export default function AssessmentScreen(props) {
 
   return (
     <View style={styles.container}>
+      <ScreenIdentifier text={module.name} color={module.color}/>
       <View style={styles.bottomButton}>
           <SelectIconButton style={[styles.button, {backgroundColor: colors.tint}]} type={'font-awesome-5'} iconColor={module.color} icon={'notes-medical'}  title="ASSESSMENT" />
       </View>
