@@ -30,15 +30,13 @@ export function AppNavigator() {
 
       headerRight: () => {
         return <RightHeaderIcons />
-      }
+      },
+      headerBackVisible: false
   }}
     >
         < MainStack.Screen 
         name="Home" component={HomeScreen} />
-        < MainStack.Screen 
-      //   options={{
-      //     headerShown: false,
-      // }}
+        < MainStack.Screen
         name="MasterChart" component={MasterChartScreen} />
         < MainStack.Screen 
         name="Disorders" component={DisordersScreen} />
