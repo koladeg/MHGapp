@@ -14,7 +14,7 @@ export default function ScreenIdentifier(props) {
             <Icon type={'ionicon'} name={'chevron-back'} size={30} color="white" />
         </Pressable>  
         <View style={{flex:1, paddingRight: 50}}>
-         <Text style={styles.identifierText}>{props.text}</Text>
+         <Text style={styles.identifierText}>{props.text}{props.subtext && <Text style={styles.subtext}> | {props.subtext}</Text>} </Text>
         </View>  
       </View>
   )
@@ -33,8 +33,12 @@ const styles = StyleSheet.create({
     // justifyContent:'center',
   },
   identifierText:{
-     fontSize:20,
+     fontSize:18,
+     fontWeight:'bold',
      color:'white',
      textAlign: 'center'
   },
+  subtext:{
+     fontWeight: '200',
+  }
  })

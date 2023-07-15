@@ -11,7 +11,7 @@ export default function MasterChartScreen() {
 
   return (
     <View style={{flex: 1}}>
-      <ScreenIdentifier text={"Master Chart"} color={colors.tertiary}/>
+      <ScreenIdentifier text={"MASTER CHART"} color={colors.tertiary}/>
       <ScrollView style={styles.container}>
           <View style={{padding: 10}}>
           <View style={styles.button1View}>

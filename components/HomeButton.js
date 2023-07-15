@@ -52,6 +52,7 @@ const styles = StyleSheet.create({
     fontSize:17,
     // lineHeight:30,
     fontWeight:'bold',
-    color:'blue'
+    color:'blue',
+    paddingTop: 20
  }
 })

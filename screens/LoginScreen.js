@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Image, Dimensions, Pressable } from 'react-native'
+import { View, Text, StyleSheet, Image, Dimensions, Pressable, ScrollView } from 'react-native'
 import React from 'react'
 import InputField from '../components/InputField'
 import GradientButton from '../components/GradientButton'
@@ -8,7 +8,7 @@ let width = Dimensions.get('window').width;
 
 const LoginScreen = (props) => {
   return (
-    <View style={styles.container}>
+    <ScrollView contentContainerStyle={styles.container}>
         <View style={styles.innerContainer}>
             <Image resizeMode={'cover'} source={require('../assets/images/mhgapLogo.png')} />
 
@@ -51,7 +51,7 @@ const LoginScreen = (props) => {
           </View>
         </View>
       {/* <Text>LoginScreen</Text> */}
-    </View>
+    </ScrollView>
   )
 }
 
