@@ -4,7 +4,7 @@ let height = Dimensions.get('window').height; //full height
 
 export function FollowUpDEM() {
   return (
-    <ScrollView style={styles.container}>
+    <ScrollView contentContainerStyle={styles.container}>
         <View style={styles.titleUnderscore}>
             <Text style={styles.title}>Recommendations on frequency of contact for follow up appointments</Text>
         </View>

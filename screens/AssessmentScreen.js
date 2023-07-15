@@ -15,7 +15,7 @@ export default function AssessmentScreen(props) {
 
   return (
     <View style={styles.container}>
-      <ScreenIdentifier text={module.name} color={module.color}/>
+      <ScreenIdentifier text={module.name} subtext={"Quick overview"} color={module.color}/>
       <View style={styles.bottomButton}>
           <SelectIconButton style={[styles.button, {backgroundColor: colors.tint}]} type={'font-awesome-5'} iconColor={module.color} icon={'notes-medical'}  title="ASSESSMENT" />
       </View>

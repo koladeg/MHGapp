@@ -30,7 +30,7 @@ export default function FollowUpScreen(props) {
   }
 
   return (
-    <View>
+    <View style={{flex:1}}>
       <ScreenIdentifier text={module.name} subtext={'FOLLOW-UP'} color={module.color} />
       {getFollowUpScreen(module)}
     </View>
