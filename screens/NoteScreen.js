@@ -1,6 +1,8 @@
 import { View, Text, useWindowDimensions, StyleSheet } from 'react-native'
 import React from 'react'
 import { SceneMap, TabBar, TabView } from 'react-native-tab-view';
+import ScreenIdentifier from '../components/ScreenIdentifier';
+import ClearNoteButton from '../components/ClearNoteButton';
 
 
 const FirstRoute = () => (
@@ -23,13 +25,13 @@ export default function NoteScreen() {
   const renderTabBar = (props) => (
       <TabBar
           {...props}
-          indicatorStyle={{ backgroundColor: 'white' }}
+          indicatorStyle={{ backgroundColor: 'blue' }}
           style={{ backgroundColor: 'white' }}
           activeColor={'blue'}
           inactiveColor={'grey'}
           renderLabel={({ route, focused, color }) => (
               <Text 
-                style={{ color , textAlign: 'center', fontSize: 17, width: 120, paddingVertical: 10, textDecorationLine: focused  ? 'underline' : 'none'}}
+                style={{ color , textAlign: 'center', fontSize: 17, width: 120, paddingVertical: 10, marginTop:60, textDecorationLine: focused  ? 'underline' : 'none'}}
                 >
                 {route.title}
               </Text>
@@ -47,6 +49,7 @@ export default function NoteScreen() {
 
   return (
     <>
+      <ClearNoteButton />
        <TabView
           lazy
           swipeEnabled={false}
