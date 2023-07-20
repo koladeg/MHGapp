@@ -4,14 +4,19 @@ import { SceneMap, TabBar, TabView } from 'react-native-tab-view';
 import ScreenIdentifier from '../components/ScreenIdentifier';
 import ClearNoteButton from '../components/ClearNoteButton';
 import RefreshPatients from '../components/RefreshPatients';
+import Search from '../components/Search';
 
 
 const FirstRoute = () => (
-    <View style={{ flex: 1  }} />
+    <View style={{ flex: 1  }}>
+      <Search />
+    </View>
 );
 
 const SecondRoute = () => (
-    <View style={{ flex: 1 }} />
+  <View style={{ flex: 1  }}>
+  <Search />
+</View>
 );
 
 const ThirdRoute = () => (
