@@ -3,6 +3,7 @@ import React from 'react'
 import { SceneMap, TabBar, TabView } from 'react-native-tab-view';
 import ScreenIdentifier from '../components/ScreenIdentifier';
 import ClearNoteButton from '../components/ClearNoteButton';
+import RefreshPatients from '../components/RefreshPatients';
 
 
 const FirstRoute = () => (
@@ -24,7 +25,7 @@ const renderScene = SceneMap({
     third: ThirdRoute
 });
 
-export default function NoteScreen() {
+export default function PatientsScreen() {
   const layout = useWindowDimensions();
 
   const renderTabBar = (props) => (
@@ -55,7 +56,7 @@ export default function NoteScreen() {
 
   return (
     <>
-      <ClearNoteButton />
+      <RefreshPatients />
        <TabView
           lazy
           swipeEnabled={false}

@@ -1,6 +1,5 @@
 import { View, Text, StyleSheet, Pressable } from 'react-native'
 import React from 'react'
-import { colors } from '../constants/Colors'
 import { Icon } from '@rneui/themed'
 import { StackActions, useNavigation } from '@react-navigation/native';
 

@@ -15,6 +15,7 @@ export default function HomeScreen() {
           icon="person"
           color="grey"
           type="fontisto"
+          screen="patients"
         />
         <HomeButton 
           title="MASTER CHART"

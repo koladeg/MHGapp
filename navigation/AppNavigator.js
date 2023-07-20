@@ -10,6 +10,7 @@ import FollowUpScreen from '../screens/FollowUpScreen';
 import LoginScreen from '../screens/LoginScreen';
 import RegisterScreen from '../screens/RegisterScreen';
 import NoteScreen from '../screens/NoteScreen';
+import PatientsScreen from '../screens/PatientsScreen';
 
 const MainStack = createNativeStackNavigator();
 
@@ -51,6 +52,8 @@ export function AppNavigator() {
         name="register" component={RegisterScreen} />
         < MainStack.Screen 
         name="notes" component={NoteScreen} />
+        < MainStack.Screen 
+        name="patients" component={PatientsScreen} />
     </ MainStack.Navigator>
   )
 }
