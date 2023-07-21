@@ -18,11 +18,11 @@ export default function Search(props) {
 
 const styles = StyleSheet.create({
     identifier:{
-        flex:1,
+        // flex:1,
     // justifyContent:'center',
   },
   container:{
-        height: 60, 
+        height: 70, 
         backgroundColor: 'white', 
         justifyContent: 'center', 
         paddingHorizontal:5
